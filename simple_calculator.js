@@ -8,6 +8,7 @@ const port = 7600;
 
 app.get('/add', (req, res) => {
   const numb = req.query.numb;
+  console.log(numb);
   let add = 0;
   for (let n = 0; n < numb.length; n++) {
     add += parseInt(numb[n]);
@@ -18,6 +19,7 @@ app.get('/add', (req, res) => {
 //this RESTful APIs will define a new endpoint that accepts an array of numbers and returns the product of those numbers
 app.get('/product', (req, res) => {
   const numb = req.query.numb;
+  console.log(numb);
   let product = 1;
   for (let n = 0; n < numb.length; n++) {
     product *= parseInt(numb[n]);
