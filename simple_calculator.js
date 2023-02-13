@@ -1,3 +1,4 @@
+//the simple calculator using nodejs and express
 const express = require('express');
 const app = express();
 const port = 7600;
@@ -5,7 +6,7 @@ const port = 7600;
 
 //this'll define a new endpoint that accepts an array of numbers and returns the sum of those numbers
 
-app.get('/addition', (req, res) => {
+app.get('/add', (req, res) => {
   const numb = req.query.numb;
   let add = 0;
   for (let n = 0; n < numb.length; n++) {
@@ -15,7 +16,7 @@ app.get('/addition', (req, res) => {
 });
 
 //this RESTful APIs will define a new endpoint that accepts an array of numbers and returns the product of those numbers
-app.get('/multiplication', (req, res) => {
+app.get('/product', (req, res) => {
   const numb = req.query.numb;
   let product = 1;
   for (let n = 0; n < numb.length; n++) {
